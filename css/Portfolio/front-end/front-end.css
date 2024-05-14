@@ -1,0 +1,24 @@
+.willys-img {
+    background-image: url(/img/front-end-jobs/Willys-chocolate-experience/cover.png);
+}
+
+.alura-med-img {
+    background-image: url(/img/front-end-jobs/alura-med/cover.png);
+}
+
+.culturama-img {
+    background-image: url(/img/front-end-jobs/culturama/cover.png);
+}
+
+.alura-play-img {
+    background-image: url(/img/front-end-jobs/alura-play/cover.png);
+}
+
+.alura-fone-img {
+    background-image: url(/img/front-end-jobs/alura-fone/cover.png);
+    background-position: center;
+}
+
+.alura-books-img {
+    background-image: url(/img/front-end-jobs/alurabooks/cover.png);
+}

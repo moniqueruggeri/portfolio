@@ -1,0 +1,71 @@
+.areas-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 32px 0;
+}
+
+.areas-section .scrolling-text-container p {
+    color: white;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 189px;
+    text-align: center;
+    border-radius: 16px;
+    width: calc(100% - 32px); /* Ajuste para considerar o espaçamento de 16px em cada lado */
+    margin: 0 16px; /* Adiciona espaçamento de 16px nas laterais */
+}
+
+.card:hover {
+    opacity: .7;
+}
+
+.card-ui:active, .card-graphic-design:active {
+    background-color: white;
+}
+
+.card-ui:active h2, 
+.card-graphic-design:active h2,
+.card-ui:active p, 
+.card-graphic-design:active p {
+    color: var(--orange);
+}
+
+.card-front-end:active {
+    background-color: var(--orange);
+}
+
+.card-front-end:active h2,
+.card-front-end:active p {
+    color: white;
+}
+
+.card-ui, .card-graphic-design {
+    background-color: var(--orange);
+}
+
+.card-front-end {
+    background-color: var(--white-ish);
+}
+
+.card-title {
+    font-size: var(--card);
+}
+
+.card-description {
+    font-weight: var(--black);
+}
+
+.card-ui .card-description, .card-graphic-design .card-title  {
+    color: var(--white-ish);
+}
+
+.card-front-end .card-title {
+    color: var(--orange);
+}

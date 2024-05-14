@@ -1,0 +1,52 @@
+.button {
+    font-size: var(--paragraphs);
+    font-weight: var(--extra-bold);
+    text-transform: uppercase;
+    border-radius: 32px;
+    text-align: center;
+}
+
+.stroke-button, .fill-button {
+    flex: 1;
+    padding: 8px;
+}
+
+.stroke-button {
+    border: 1px solid var(--orange);
+    color: var(--orange);
+}
+
+.fill-button {
+    background-color: var(--orange);
+    color: white;
+}
+
+.buttons-container {
+    position: relative;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    width: 100%;
+}
+
+.fill-button:hover {
+    color: var(--orange);
+    background-color: white;
+}
+
+.stroke-button:hover {
+    color: white;
+    border: 1px solid white
+}
+
+.fill-button:active {
+    color: white;
+    background-color: var(--orange);
+    opacity: .5;
+}
+
+.stroke-button:active {
+    color: var(--orange);
+    background-color: white;
+    opacity: .5;
+}

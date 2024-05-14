@@ -1,0 +1,46 @@
+.img-container {
+    display: flex;
+    height: 450px;
+    overflow-y: scroll;
+    flex: 1;
+}
+
+.willys-img-page {
+    width: 90%;
+}
+
+.img-container img {
+    height: 4203px;
+    display: block;
+    width: 100%;
+}
+
+.img-front {
+    height: 6327px;
+}
+
+.side-imgs {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 0 16px;
+}
+
+.img-before, .img-after {
+    width: 100%;
+    overflow-y: scroll;
+    height: 450px;
+    border-radius: 16px;
+}
+
+
+.before-after {
+    display: flex;
+    justify-content: space-around;
+}
+
+.before-after p {
+    font-weight: var(--black);
+    color: var(--orange);
+    text-transform: uppercase;
+}

@@ -1,0 +1,128 @@
+/* Resume text */
+
+.about-img-page {
+    height: 22px;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}
+
+.about-me .texts-container {
+    padding: 32px 16px 0 16px;
+    color: white;
+}
+
+.about-me .scrolling-text-container p {
+    color: white;
+}
+
+
+/* Work Experiences */
+
+.work-experience, 
+.work-experience-container, 
+.work-experience-list,
+.work-experience-item,
+.work-experience-item-titles {
+    display: flex;
+    flex-direction: column;
+}
+
+.work-experience {
+    gap: 42px;
+    padding: 54px 16px 32px 16px;
+}
+
+.title-container {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+
+.title-container img {
+    width: 24px;
+}
+
+.work-experience-container, .work-experience-list { 
+    gap: 32px;
+}
+
+.work-experience .smallest-title, .education .smallest-title{
+    color: var(--orange);
+}
+
+.work-experience .titles .description {
+    font-weight: var(--extra-bold);
+    color: white;
+}
+
+.work-experience-item .description {
+    color: white;
+}
+
+.work-experience-item:nth-child(2n){
+    text-align: right;
+}
+
+.work-experience-item {
+    gap: 16px;
+}
+
+ /* Education */
+
+.education {
+    position: relative;
+    padding-bottom: 24px;
+}
+
+.education-container, .education-container-texts,.other-courses-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.education-container {
+    padding: 40px 16px;
+    gap: 32px;
+}
+
+.education-container-texts {
+    gap: 16px;
+}
+
+.education .titles .description {
+    font-weight: var(--extra-bold);
+}
+
+.other-courses-container {
+    padding: 32px 16px;
+    gap: 42px;
+}
+
+/* Select Boxes */
+
+.selection-boxes {
+    display: flex;
+    gap: 32px;
+    justify-content: space-between;
+}
+
+.selection-box-design, .selection-box-front-end {
+    width: 100%;
+    font-weight: var(--black);
+}
+
+.design-courses-list, .front-end-courses-list {
+    background-color: var(--orange);
+    border-radius: 8px;
+    padding: 10px 15px;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.design-course, .front-end-course {
+    background-color: white;
+    border-bottom: 1px solid rgba(28, 28, 28, .3);
+}

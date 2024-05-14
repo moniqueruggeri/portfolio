@@ -1,0 +1,98 @@
+.menu-list, .menu-botao {
+    display: none;
+}
+
+.menu-icone {
+    background-image: url(/img/layout-elements/menu-icon.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 24px;
+    height: 16px;
+    position: relative;
+    z-index: 2;
+    transition: background-image 0.2s ease-in-out;
+}
+
+.menu-botao:checked~ .label-menu > .menu-icone {
+    background-image: url(/img/layout-elements/menu-exit.svg);
+}
+
+.menu-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 79px 16px 32px 16px;
+    z-index: 1;
+    width: 70%;
+    color: white;
+    background-color: rgba(40, 40, 40, 0.9);
+}
+
+.menu-botao:checked ~.menu-list {
+    display: block;
+}
+
+.container-menu {
+    text-align: right;
+}
+
+.menu-item {
+    padding: 24px 0;
+    text-transform: uppercase;
+    font-weight: var(--black);
+    font-size: var(--menu-hmb);
+}
+
+.menu-language {
+    display: flex;
+    justify-content: right;
+    gap: 16px;
+    padding: 42px 0;
+    font-weight: var(--bold);
+    color: var(--orange);
+}
+
+.active {
+    color: white;
+}
+
+.inactive {
+    color: #787878;
+}
+
+.page-active-home, .page-active-about, .page-active-portfolio, .page-active-hire-me {
+    position: relative;
+}
+
+.page-active-home::after {
+    width: 33%; /* Estende o pseudo-elemento por toda a largura do elemento pai */
+}
+
+.page-active-about::after {
+    width: 40%;
+}
+
+.page-active-portfolio::after {
+    width: 62%;
+}
+
+.page-active-hire-me::after {
+    width: 45%;
+}
+
+.menu-icones {
+    display: flex;
+    justify-content: right;
+    gap: 16px;
+}
+
+.page-active-home::after, .page-active-about::after, .page-active-portfolio::after, .page-active-hire-me::after {
+    content: ""; /* Adiciona o pseudo-elemento */
+    position: absolute;
+    bottom: 20px; /* Alinha o pseudo-elemento na parte inferior */
+    right: 0; /* Alinha o pseudo-elemento à esquerda */
+    height: 4px; /* Altura da linha */
+    background-color: var(--orange); /* Cor da linha */
+}

@@ -1,0 +1,10 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;           
+}
+
+.social-media-icons {
+    display: flex;
+    gap: 8px;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>AluraBooks</title>
+</head>
+<body>
+    <section class="header">
+        <div class="header-container">
+            <img  class="img-header gd-img-page" src="/img/front-end-jobs/SVG/alurabooks.svg" alt="">
+            <div class="container-menu">
+                <input type="checkbox" id="menu" class="menu-botao">
+                    <label for="menu" class="label-menu">
+                        <span class="menu-icone"></span>
+                    </label>
+                    <ul class="menu-list">
+                        <li class="menu-item"><a href="/index.html">Home</a></li>
+                        <li class="menu-item"><a href="/about.html">About</a></li>
+                        <li class="menu-item stroke-white page-active-portfolio"><a href="/portfolio.html">Portfolio</a></li>
+                        <li class="menu-item"><a href="/hireme.html">Hire me</a></li>
+                        <ul class="menu-language">
+                            <li class="menu-language-item">
+                                <a href="#" class="language active">EN</a>
+                            </li>
+                            <li>|</li>
+                            <li class="menu-language-item">
+                                <a href="#" class="language inactive">PT</a>
+                            </li>
+                        </ul>
+                        <ul class="menu-icones">
+                            <li>
+                                <img src="/img/layout-elements/Instagram.svg" alt="">
+                            </li>
+                            <li>
+                                <img src="/img/layout-elements/GitHub.svg" alt="">
+                            </li>
+                            <li>
+                                <img src="/img/layout-elements/Behance.svg" alt="">
+                            </li>
+                            <li>
+                                <img src="/img/layout-elements/vercel.svg" alt="">
+                            </li>
+                        </ul>
+                    </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-page aluramed-project">
+        <div class="banner-project">
+            <img src="/img/front-end-jobs/alurabooks/cover.png" class="main-img-project" alt="">
+            <ul class="tags">
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
+                <li class="tag">JAVASCRIPT</li>
+            </ul>
+        </div>
+
+        <div class="resume-project">
+            <h1 class="big-title align-right"><span class="stroke-white">About</span> the project</h1>
+            <p class="description align-justify">
+                Alura Books is a fictitious e-commerce developed during an Alura course with the aim of simulating a virtual store that sells books about technology. The project was built entirely with HTML and CSS, while JavaScript was used to implement the image slider, offering an interactive experience to users.
+            </p>
+            <p class="description align-justify">
+                In the Alura Books project, I applied my knowledge of HTML, CSS, and JavaScript to create an engaging shopping experience for users interested in technology books. Using HTML, I structured the elements of the page, from the header to the footer, ensuring a logical and intuitive organization of content. With CSS, I styled the website layout to provide an attractive and cohesive visual experience. Additionally, with JavaScript, I implemented the functionality of the image slider, offering a dynamic and interactive way to view the products available in the store. This project demonstrates my ability to develop functional and visually appealing web interfaces, integrating basic web technologies to create an enhanced user experience.
+            </p>
+        </div>
+
+        <div class="slider-container">
+            <div class="slider-project-img">
+                <img src="/img/front-end-jobs/alurabooks/1.png" class="img-slider" alt="">
+                <img src="/img/front-end-jobs/alurabooks/2.png" class="img-slider" alt="">
+                <img src="/img/front-end-jobs/alurabooks/3.png" class="img-slider" alt="">
+                <img src="/img/front-end-jobs/alurabooks/4.png" class="img-slider" alt="">
+                <img src="/img/front-end-jobs/alurabooks/5.png" class="img-slider" alt="">
+                <img src="/img/front-end-jobs/alurabooks/6.png" class="img-slider" alt="">
+            </div>
+            <div class="slider-pagination"></div>
+        </div>
+
+        <div class="buttons-container">
+            <a href="https://alura-books-jade.vercel.app/" class="stroke-button button">See the project</a>
+            <a href="/hireme.html" class="fill-button button">Hire me</a>
+        </div>
+
+        <div class="other-projects">
+            <h2 class="small-title"><span class="stroke-white">View other</span> projects</h2>
+            <div class="projects">
+                        <div class="card card-project">
+            <a href="serzzare.html">
+                <div class="card-background-img serzzare-img"></div>
+                <div class="card-container">
+                    <h2 class="smallest-title">Serzzare Semijoias</h2>
+                </div>
+                <div class="card-background-color"></div>
+            </a>
+        </div>
+        
+                <div class="card card-project">
+                    <a href="rooftop.html">
+                        <div class="card-background-img rooftop-img"></div>
+                        <div class="card-container">
+                            <h2 class="smallest-title">Rooftop Agência de Performance</h2>
+                        </div>
+                        <div class="card-background-color"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <img src="/img/layout-elements/monique-logo.svg"  class="img-header" alt="Monique.">
+        <ul class="social-media-icons">
+            <li>
+                <img src="/img/layout-elements/Instagram.svg" alt="">
+            </li>
+            <li>
+                <img src="/img/layout-elements/GitHub.svg" alt="">
+            </li>
+            <li>
+                <img src="/img/layout-elements/Behance.svg" alt="">
+            </li>
+            <li>
+                <img src="/img/layout-elements/vercel.svg" alt="">
+            </li>
+        </ul>
+    </footer>
+    <script src="/javascript/script.js"></script>
+</body>
+</html>

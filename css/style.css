@@ -1,0 +1,156 @@
+@import url(header.css);
+@import url(menu.css);
+@import url(index.css);
+@import url(about.css);
+@import url(/css/Portfolio/portfolio.css);
+    @import url(/css/Portfolio/graphic-design/graphic-design-page.css);
+        @import url(/css/Portfolio/graphic-design/Jobs/project-details.css);
+    @import url(/css/Portfolio/front-end/front-end.css);
+        @import url(/css/Portfolio/front-end/Jobs/willys.css);
+        @import url(/css/Portfolio/front-end/Jobs/aluramed.css);
+        @import url(/css/Portfolio/front-end/Jobs/aluraplay.css);
+
+@import url(hire-me.css);
+@import url(footer.css);
+
+
+@import url(buttons.css);
+@import url(slider.css);
+
+:root {
+    /* colors */
+    --orange: #F28F17;
+    --black-ish: #282828;
+    --white-ish: #F5F5F5;
+
+    /* font */
+    --main-font: "Nunito Sans", sans-serif;
+
+    /* font weights */
+    --black: 900;
+    --extra-bold: 800;
+    --regular: 400;
+    --light: 300;
+
+    /* font sizes */
+    --big-title: 62px;
+    --medium-title: 48px;
+    --small-title: 40px;
+    --smallest-title: 24px;
+    
+    --card: 76px;
+    --menu-hmb: 32px;
+    --selection: 12px;
+    --tags: 10px;
+}
+
+.about-img, .portfolio-img, .hire-me-img {
+    opacity: .3;
+}
+
+body {
+    background-color: var(--black-ish);
+    background-image: url(/img/layout-elements/grade.svg);
+    background-blend-mode:soft-light ;
+    font-family: var(--main-font);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.stroke-white {
+    -webkit-text-fill-color: transparent; /* Torna o texto transparente */
+    -webkit-text-stroke: 0.3px white; /* Adiciona uma borda de 2px preta ao texto */
+    text-stroke: 1px white; /* Adiciona uma borda de 2px preta ao texto */
+}
+
+.stroke-orange {
+    -webkit-text-fill-color: transparent; /* Torna o texto transparente */
+    -webkit-text-stroke: 0.6px var(--orange); /* Adiciona uma borda de 2px preta ao texto */
+    text-stroke: 1px white; /* Adiciona uma borda de 2px preta ao texto */
+}
+
+.stroke-black {
+    position: relative; /* Para posicionar o texto contornado */
+    color: transparent; /* Torna o texto transparente */
+    -webkit-text-stroke: 1px black; /* Define um contorno do texto com 1px preto */
+    text-stroke: 1px black; /* Define um contorno do texto com 1px preto */
+    z-index: 1; /* Coloca o texto contornado na frente */
+}
+
+/* TEXTS */
+
+.align-justify {
+    text-align: justify;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.smallest-title, 
+.small-title,
+.medium-title,
+.big-title {
+    font-weight: var(--black);
+    line-height: 80%;
+}
+
+.smallest-title {
+    font-size: var(--smallest-title);
+}
+
+.small-title {
+    font-size: var(--small-title);
+}
+
+.medium-title {
+    font-size: var(--medium-title);
+}
+
+.big-title {
+    font-size: var(--big-title);
+}
+
+.description {
+    line-height: 24px;
+}
+
+.texts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Scrolling text */
+
+.scrolling-text-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.scrolling-text {
+    display: flex;
+    gap: 16px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    animation: scroll-left 10s linear infinite;
+    font-weight: var(--extra-bold);
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.navigation-section {
+    flex: 1;
+}

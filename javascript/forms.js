@@ -1,32 +1,18 @@
-document.getElementById('form').addEventListener('submit', function(e){
+document.getElementById('form').addEventListener('submit', async function(e){
     e.preventDefault();
 
     const formData = new FormData(this);
-    const object = {};
-
-    formData.forEach((value, key)=>{
-        object[key]= value;
-    });
-
-    const jsonData = JSON.stringify(object);
-
-    fetch('URL_DA_SUA_FUNCAO_SERVERLESS', {
-        method: 'POST',
-        headers: {
-            'Content-Type' : 'application/json'
-        },
-        body: jsonData
-    })
-
-    .then(response => {
-        if (response.ok) {
+    try{
+        const response = await fetch ('/api/submit-form.js', {
+            method: 'POST',
+            body: formData,
+        });
+          if (response.ok) {
             alert('Formulário enviado com sucesso!');
         } else {
-            alert('Erroao enviar o formulário.');
+            alert('Erro ao enviar o formulário.', response.statusText);
         }
-    })
-
-    .catch(error => {
-        console.error('Erro:', error);
-    })
-})
+    }     catch(error) {
+        console.error('Erro ao enviar o formulário:', error);
+    }
+});

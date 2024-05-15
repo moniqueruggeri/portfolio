@@ -9,8 +9,8 @@ export default async function handler(req, res) {
 
         const requestBody = {
           values: [
-            ['Nome', 'Email', 'Mensagem'],
-            [formData.name, formData.email, formData.message]
+            ['Nome', 'Email', 'Assunto', 'Mensagem'],
+            [formData.name, formData.email, formData.subject, formData.message]
           ]
         };
 

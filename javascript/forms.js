@@ -3,14 +3,14 @@ document.getElementById('form').addEventListener('submit', async function(e){
 
     const formData = new FormData(this);
     try{
-        const response = await fetch ('/api/submit-form.js', {
+        const response = await fetch ('/api/submit-form', {
             method: 'POST',
             body: formData,
         });
           if (response.ok) {
-            alert('Formulário enviado com sucesso!');
+            console.log('Formulário enviado com sucesso!');
         } else {
-            alert('Erro ao enviar o formulário.', response.statusText);
+            console.error('Erro ao enviar o formulário.', response.statusText);
         }
     }     catch(error) {
         console.error('Erro ao enviar o formulário:', error);

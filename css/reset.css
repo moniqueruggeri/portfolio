@@ -84,3 +84,19 @@ select {
 	font-weight: inherit;
 	font-family: inherit;
 }
+
+/* Reset básico para formulários e inputs */
+form, input, textarea, select, button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Remover borda de foco laranja */
+input:focus, textarea:focus, select:focus, button:focus {
+    outline: none; /* Remove a borda de foco */
+}

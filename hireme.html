@@ -1,53 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Hire me.</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <title>Hire me.</title>
+        <script type="module" src="/js/main.js"></script>
+    </head>
 <body>
     <section class="header">
         <div class="header-container">
-            <img  class="img-header about-img-page" src="img/layout-elements/Hireme2.svg" alt="">
+            <img class="img-header about-img-page" src="img/layout-elements/Hireme2.svg" alt="">
             <div class="container-menu">
                 <input type="checkbox" id="menu" class="menu-botao">
-                    <label for="menu" class="label-menu">
-                        <span class="menu-icone"></span>
-                    </label>
-                    <ul class="menu-list">
-                        <li class="menu-item"><a href="index.html">Home</a></li>
-                        <li class="menu-item"><a href="about.html">About</a></li>
-                        <li class="menu-item"><a href="portfolio.html">Portfolio</a></li>
-                        <li class="menu-item stroke-white page-active-hire-me">Hire me</li>
-                        <ul class="menu-language">
-                            <li class="menu-language-item">
-                                <a href="#" class="language active">EN</a>
-                            </li>
-                            <li>|</li>
-                            <li class="menu-language-item">
-                                <a href="#" class="language inactive">PT</a>
-                            </li>
-                        </ul>
-                        <ul class="menu-icones">
-                            <li>
-                                <img src="img/layout-elements/Instagram.svg" alt="">
-                            </li>
-                            <li>
-                                <img src="img/layout-elements/GitHub.svg" alt="">
-                            </li>
-                            <li>
-                                <img src="img/layout-elements/Behance.svg" alt="">
-                            </li>
-                            <li>
-                                <img src="img/layout-elements/vercel.svg" alt="">
-                            </li>
-                        </ul>
+                <label for="menu" class="label-menu">
+                    <span class="menu-icone"></span>
+                </label>
+                <ul class="menu-list">
+                    <li class="menu-item"><a href="index.html">Home</a></li>
+                    <li class="menu-item"><a href="about.html">About</a></li>
+                    <li class="menu-item"><a href="portfolio.html">Portfolio</a></li>
+                    <li class="menu-item stroke-white page-active-hire-me">Hire me</li>
+                    <ul class="menu-language">
+                        <li class="menu-language-item">
+                            <a href="#" class="language active">EN</a>
+                        </li>
+                        <li>|</li>
+                        <li class="menu-language-item">
+                            <a href="#" class="language inactive">PT</a>
+                        </li>
                     </ul>
+                    <ul class="menu-icones">
+                        <li>
+                            <img src="img/layout-elements/Instagram.svg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/layout-elements/GitHub.svg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/layout-elements/Behance.svg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/layout-elements/vercel.svg" alt="">
+                        </li>
+                    </ul>
+                </ul>
             </div>
         </div>
     </section>
@@ -55,24 +56,27 @@
     <nav class="navigation-section">
         <section class="forms-container">
             <div class="texts-container">
-                <h2 class="big-title"><span class="stroke-white">Let’s create an</span> amazing project <span class="stroke-white">together!</span></h2>
+                <h2 class="big-title align-right"><span class="stroke-white">Let’s create an</span> amazing project <span class="stroke-white">together!</span></h2>
                 <p class="description align-justify">Lorem ipsum dolor sit amet consectetur. Etiam pharetra porttitor arcu dignissim in amet rhoncus. Tempor dui enim pharetra turpis dolor mauris.</p>
             </div>
             <div class="form">
-                <form method="post" action="" name="form">
+                <form method="post" action="" name="form" id="form">
                     <div class="form-name-email">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Name*" required>
+                        <div class="form-group form-name">
+                            <input type="text" id="name" name="name" placeholder="Name*" required>
+                            <span class="textError"></span>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Email*" required>
+                            <input type="email" id="email" name="email" placeholder="Email*" required>
+                            <span class="textError"></span>
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="subject" placeholder="Subject*" required>
+                        <input type="text" id="subject" name="subject" placeholder="Subject">
                     </div>
                     <div class="form-group">
-                        <textarea name="message" cols="30" rows="3" placeholder="Message*" required></textarea>
+                        <textarea id="message" name="message" cols="30" rows="3" placeholder="Message*" required></textarea>
+                        <span class="textError"></span>
                     </div>
                     <div class="fill-button button">
                         <input type="submit" value="Send" id="submit" class="input-submit">
@@ -80,12 +84,10 @@
                 </form>
             </div>
         </section>
-
-
     </nav>
 
     <footer class="footer">
-        <img src="img/layout-elements/monique-logo.svg"  class="img-header" alt="Monique.">
+        <img src="img/layout-elements/monique-logo.svg" class="img-header" alt="Monique.">
         <ul class="social-media-icons">
             <li>
                 <img src="img/layout-elements/Instagram.svg" alt="">
@@ -101,5 +103,6 @@
             </li>
         </ul>
     </footer>
-    <script src="/javascript/script.js" type="module"></script>
+
+</body>
 </html>

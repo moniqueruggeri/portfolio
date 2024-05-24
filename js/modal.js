@@ -4,7 +4,10 @@ const fade = document.querySelector(".fade");
     export function showModal() {
         modal.style.display = "block";
         fade.style.display = "block";
-        setTimeout(closeModal, 5000);
+        setTimeout(()=> {
+            closeModal();
+            window.location.reload();
+        }, 5000);
     }
     
     export function closeModal() {

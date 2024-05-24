@@ -15,7 +15,6 @@ export function submitForm() {
 
         fetch(scriptURL, {method:'POST', body:new FormData(form)})
             .then(response => showModal())
-            // .then(() => {window.location.reload();})
             .catch(error => console.error("Error!", error.message))
     });
 }

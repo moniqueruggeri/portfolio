@@ -1,4 +1,6 @@
 import { valida } from "./form-validation.js";
+import { showModal } from "./modal.js";
+import { closeModal } from "./modal.js";
 
 export function submitForm() {
 
@@ -12,8 +14,8 @@ export function submitForm() {
         e.preventDefault();
 
         fetch(scriptURL, {method:'POST', body:new FormData(form)})
-            .then(response => alert("Dados enviados com sucesso!"))
-            .then(() => {window.location.reload();})
+            .then(response => showModal())
+            // .then(() => {window.location.reload();})
             .catch(error => console.error("Error!", error.message))
     });
 }

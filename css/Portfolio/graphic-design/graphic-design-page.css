@@ -29,12 +29,7 @@
 
 .card-project {
     position: relative;
-    display: flex;
-    flex-direction: column;
     justify-content: flex-end;
-    width: 399px;
-    height: 189px;
-    border-radius: 16px;
 }
 
 .card-background-img, .card-background-color {

@@ -5,8 +5,8 @@
     flex-direction: column;
     padding: 16px 16px 24px 16px;
     position: relative;
-    overflow: hidden;
     gap: -32px;
+    overflow: hidden;
 }
 
 .texts-banner {
@@ -14,10 +14,15 @@
 }
 
 .text-banner {
-    font-size: 78px;
+    font-size:8vh;
     font-weight: var(--black);
     color: white;
-    line-height: 64px;
+    line-height: 6.6vh;
+}
+
+.texts-banner .texts-container {
+    gap: 0;
+    overflow: visible;
 }
 
 .banner .buttons-container {
@@ -34,7 +39,7 @@
 
 .back-text::before {
     content: "&"; /* Adiciona o símbolo '&' como conteúdo do pseudo-elemento */
-    font-size: 520px; /* Tamanho maior */
+    font-size: 54vh; /* Tamanho maior */
     position: absolute;
     top: 45%;
     left: 70%;
@@ -88,7 +93,7 @@
 /* Portfolio */
 
 .portfolio {
-    padding: 72px 16px;
+    padding: 72px 0;
     display: flex;
     flex-direction: column;
     gap: 42px;
@@ -98,18 +103,30 @@
     width: 32px;
 }
 
+.portfolio .button {
+    margin: 0 16px;
+}
+
 .portfolio-container {
+    position: relative;
     display: flex;
     gap: 32px;
+    overflow: hidden;
+    padding-left:  16px;
+}
+
+.cards-portfolio {
+    position: relative;
+    overflow-x: auto;   
+    padding-right: 16px;
 }
 
 .card-portfolio-list {
     display: flex;
-    max-width:350px;
     gap: 16px;
-    overflow-x: auto; /* Adiciona uma barra de rolagem horizontal automaticamente */
     white-space: nowrap;
-}
+    box-sizing: border-box;
+    padding-right: 16px; /* Espaço adicional para a rolagem */}
 
 .card-portfolio-item {
     background-color: var(--orange);
@@ -144,13 +161,14 @@
     color: var(--black-ish);
 }
 
-.card-portfolio-list :nth-child(3) {
-    margin-right: 16px;
-}
-
 .card-portfolio-item p {
     font-weight: var(--black);
     color: white;
+}
+
+.card-portfolio-list::after {
+    content: '';
+    flex: 0 0 8px; /* Ajuste conforme necessário para o espaçamento desejado */
 }
 
 /* Hire me */

@@ -5,6 +5,7 @@
 
 .slider-project-img {
     display: flex;
+    align-items: center;
     flex-direction: row;
     gap: 16px;
     overflow: hidden;

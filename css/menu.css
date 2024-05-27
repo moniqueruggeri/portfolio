@@ -63,23 +63,8 @@
 }
 
 .page-active-home, .page-active-about, .page-active-portfolio, .page-active-hire-me {
+    display: inline-block;
     position: relative;
-}
-
-.page-active-home::after {
-    width: 33%; /* Estende o pseudo-elemento por toda a largura do elemento pai */
-}
-
-.page-active-about::after {
-    width: 40%;
-}
-
-.page-active-portfolio::after {
-    width: 62%;
-}
-
-.page-active-hire-me::after {
-    width: 45%;
 }
 
 .menu-icones {
@@ -92,6 +77,7 @@
     content: ""; /* Adiciona o pseudo-elemento */
     position: absolute;
     bottom: 20px; /* Alinha o pseudo-elemento na parte inferior */
+    width: 100%;
     right: 0; /* Alinha o pseudo-elemento à esquerda */
     height: 4px; /* Altura da linha */
     background-color: var(--orange); /* Cor da linha */

@@ -21,19 +21,19 @@
     margin: 0 16px;
 }
 
-.banner-project, .resume-project, .slider-project-img {
+.resume-project, .slider-project-img {
     padding: 0 16px;
 }
 
 .banner-project .tags {
-    padding: 21px 0;
+    padding: 21px 16px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.main-img-project {
-    width: 398px;
-    height: 273px;
-    object-fit:cover;
-    border-radius: 16px;
+.banner-project .card {
+    height: 250px;
+    object-fit: cover;
 }
 
 .resume-project {
@@ -45,12 +45,6 @@
 
 .about-the-project {
     text-align: right;
-}
-
-.slider-project-img {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .img-slider {

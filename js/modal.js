@@ -7,7 +7,7 @@ const fade = document.querySelector(".fade");
         setTimeout(()=> {
             closeModal();
             window.location.reload();
-        }, 5000);
+        }, 3000);
     }
     
     export function closeModal() {

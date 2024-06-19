@@ -50,3 +50,13 @@
     background-color: white;
     opacity: .5;
 }
+
+@media screen and (min-width: 1024px) {
+    .buttons-container {
+        gap: 77px;
+        margin: auto;
+        width: 70%;
+    }
+
+
+}

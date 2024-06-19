@@ -1,67 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
     <title>Monique.</title>
 </head>
+
 <body>
     <section class="header">
         <div class="header-container">
-            <img  class="img-header" src="img/layout-elements/monique-logo.svg" alt="">
+            <img class="img-header" src="img/layout-elements/monique-logo.svg" alt="">
             <div class="container-menu">
                 <input type="checkbox" id="menu" class="menu-botao">
-                    <label for="menu" class="label-menu">
-                        <span class="menu-icone"></span>
-                    </label>
-                    <ul class="menu-list">
-                        <li class="menu-item stroke-white page-active-home">Home</li>
-                        <li class="menu-item"><a href="/about.html">About</a></li>
-                        <li class="menu-item"><a href="/portfolio.html">Portfolio</a></li>
-                        <li class="menu-item"><a href="/hireme.html">Hire me</a></li>
-                        <ul class="menu-language">
-                            <li class="menu-language-item">
-                                <a href="#" class="language active">EN</a>
-                            </li>
-                            <li>|</li>
-                            <li class="menu-language-item">
-                                <a href="#" class="language inactive">PT</a>
-                            </li>
-                        </ul>
-                        <ul class="menu-icones">
-                            <li>
-                                <img src="img/layout-elements/Instagram.svg" alt="">
-                            </li>
-                            <li>
-                                <img src="img/layout-elements/GitHub.svg" alt="">
-                            </li>
-                            <li>
-                                <img src="img/layout-elements/Behance.svg" alt="">
-                            </li>
-                            <li>
-                                <img src="img/layout-elements/vercel.svg" alt="">
-                            </li>
-                        </ul>
+                <label for="menu" class="label-menu">
+                    <span class="menu-icone"></span>
+                </label>
+                <ul class="menu-list">
+                    <li class="menu-item stroke-white page-active-home">Home</li>
+                    <li class="menu-item"><a href="/about.html">About</a></li>
+                    <li class="menu-item"><a href="/portfolio.html">Portfolio</a></li>
+                    <li class="menu-item"><a href="/hireme.html">Hire me</a></li>
+                    <ul class="menu-language">
+                        <li class="menu-language-item">
+                            <a href="#" class="language active">EN</a>
+                        </li>
+                        <li>|</li>
+                        <li class="menu-language-item">
+                            <a href="#" class="language inactive">PT</a>
+                        </li>
                     </ul>
+                    <ul class="menu-icones">
+                        <li>
+                            <img src="img/layout-elements/Instagram.svg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/layout-elements/GitHub.svg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/layout-elements/Behance.svg" alt="">
+                        </li>
+                        <li>
+                            <img src="img/layout-elements/vercel.svg" alt="">
+                        </li>
+                    </ul>
+                </ul>
             </div>
         </div>
     </section>
 
     <section class="banner">
-        <div class="texts-banner">
-            <div class="texts-container">
-                <h2 class="text-banner stroke-white">FRONT END <br>DEV</h2>
-                <h2 class="text-banner">UI<span class="color">/</span><br>GRAPHIC DESIGNER</h2>
+        <div class="texts-container">
+            <div class="text-animation">
+                <h2 class="text-banner stroke-orange moving-text">FRONT <br>END DEV</h2>
+                <h2 class="text-banner stroke-white background-text">FRONT <br>END DEV</h2>
             </div>
-            <h2 class="text-banner back-text">&</h2>
+            <p class="text-description">and also <span class="orange">UI</span> and <span class="orange">Graphic
+                    Designer</span></p>
         </div>
         <div class="buttons-container">
-            <a href="/portfolio.html" class="stroke-button button">Portfolio</a>
+            <a href="/Portfolio/frontend.html" class="stroke-button button">Portfolio</a>
             <a href="hireme.html" class="fill-button button">Hire me</a>
         </div>
     </section>
@@ -71,8 +76,10 @@
             <div class="about-container">
                 <img src="img/layout-elements/about-vert-preto.svg" class="about-img" alt="about">
                 <div class="texts-container align-right">
-                    <h3 class="small-title">Hi! <br><span class="stroke-black">I'm Monique,</span></h3>
-                    <p class="description">lorem ipsum dolor sit amet consectetur. Lorem imperdiet nullam in odio lobortis enim lorem.</p>
+                    <h3 class="small-title">Hi! <br><span class="stroke-black">I'm <br
+                                class="break-text">Monique,</span></h3>
+                    <p class="description">
+                        Front-end student with a degree in Multimedia Production, background in design, and a passion for web development.</p>
                 </div>
             </div>
             <a href="about.html" class="stroke-button button">Know More</a>
@@ -84,18 +91,19 @@
                 <img src="img/layout-elements/portfolio-vert-branco.svg" class="portfolio-img" alt="">
                 <div class="cards-portfolio">
                     <div class="card-portfolio-list">
-                        <a href="/Portfolio/ui.html" class="card-portfolio-item">
-                                <h3 class="card-title">UI</h3>
-                                <p>UI Desgin</p>
-                        </a>
-                        <a href="/Portfolio/frontend.html" class="card-portfolio-item">
+                        <a href="/Portfolio/frontend.html" class="card-portfolio-item frontend">
                             <h3 class="card-title">FE</h3>
                             <p>Front End</p>
                         </a>
-                        <a href="/Portfolio/graphic-design-page.html" class="card-portfolio-item">
-                            <h3 class="card-title">GD</h3>
-                            <p>Graphic Desgin</p>
-                        </a>
+                        <div class="design-ui">
+                            <a href="#" class="card-portfolio-item">
+                                <h3 class="card-title">UI</h3>
+                            </a>
+                            <a href="https://www.behance.net/moodboard/212873059/Graphic-Design"
+                                class="card-portfolio-item">
+                                <h3 class="card-title">GD</h3>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -103,7 +111,7 @@
         </section>
 
         <section class="hire-me-section">
-            <div class="scrolling-text-container">
+            <!-- <div class="scrolling-text-container">
                 <div class="scrolling-text">
                     <p>Front End</p>
                     <img src="img/layout-elements/star-white.svg" alt="">
@@ -124,21 +132,22 @@
                     <p>Design</p>
                     <img src="img/layout-elements/star-white.svg" alt="">
                 </div>
-            </div>
+            </div> -->
             <div class="hire-me-container">
                 <img src="img/layout-elements/hireme-vert-preto-branco.svg" class="hire-me-img" alt="">
-                <div class="texts-container align-right">
-                    <h3 class="small-title"><span class="stroke-white">Liked</span> <br>my work?</h3>
-                    <p class="description">lorem ipsum dolor sit amet consectetur. Lorem imperdiet nullam in odio lobortis enim lorem.</p>
-                    <a href="hireme.html" class="fill-button button">Let's talk</a>
+                <div class="texts-container">
+                    <h3 class="small-title align-right"><span class="stroke-white">Liked</span> <br class="break-text">my <br class="break-sec-text">work?</h3>
+                    <p class="description">
+                        Feel free to reach out for collaborations, inquiries, or just to say hello! Let's create something amazing together.</p>
                 </div>
             </div>
+            <a href="hireme.html" class="fill-button button">Let's talk</a>
             <div class="background-orange"></div>
         </section>
     </nav>
 
     <footer class="footer">
-        <img src="img/layout-elements/monique-logo.svg"  class="img-header" alt="Monique.">
+        <img src="img/layout-elements/monique-logo.svg" class="img-header" alt="Monique.">
         <ul class="social-media-icons">
             <li>
                 <img src="img/layout-elements/Instagram.svg" alt="">
@@ -156,4 +165,5 @@
     </footer>
     <script src="./js/main.js" type="module"></script>
 </body>
+
 </html>

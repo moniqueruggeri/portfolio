@@ -48,6 +48,10 @@
     opacity: .3;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--black-ish);
     background-image: url(/img/layout-elements/grade.svg);
@@ -79,6 +83,10 @@ body {
     -webkit-text-stroke: 1px black; /* Define um contorno do texto com 1px preto */
     text-stroke: 1px black; /* Define um contorno do texto com 1px preto */
     z-index: 1; /* Coloca o texto contornado na frente */
+}
+
+.orange {
+    color: var(--orange);
 }
 
 /* TEXTS */

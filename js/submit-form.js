@@ -18,8 +18,8 @@ export function submitForm() {
 
         fetch(scriptURL, {method:'POST', body:new FormData(form)})
             .then(response => {
-                loader.restore();
                 showModal();
+                loader.restore();
             }) 
             .catch(error => {
                 console.error("Error!", error.message);

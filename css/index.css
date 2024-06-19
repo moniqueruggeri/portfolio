@@ -1,53 +1,58 @@
 /* Banner */
 
 .banner {
-    display: flex;
-    flex-direction: column;
-    padding: 16px 16px 24px 16px;
-    position: relative;
-    gap: -32px;
-    overflow: hidden;
+    padding: 32px 16px;
 }
 
-.texts-banner {
-    position: relative; /* Necessário para posicionar o pseudo-elemento */
-}
-
-.text-banner {
-    font-size:8vh;
-    font-weight: var(--black);
-    color: white;
-    line-height: 6.6vh;
-}
-
-.texts-banner .texts-container {
+.banner .texts-container {
+    text-align: center;
+    padding: 2em 0 2em 0;
     gap: 0;
-    overflow: visible;
 }
 
-.banner .buttons-container {
-    top: -32px;
+.banner .texts-container p {
+    color: white;
 }
 
-.color {
-    color: var(--orange);
+.banner .texts-container span {
+    font-weight: var(--black);
 }
 
-.back-text {
-    color: transparent;
+    /* Texto animado do banner  */
+
+.text-animation {
+    position: relative;
+    bottom: 4em;
+    padding: 32px 0;
+    margin-top: 24px;
 }
 
-.back-text::before {
-    content: "&"; /* Adiciona o símbolo '&' como conteúdo do pseudo-elemento */
-    font-size: 54vh; /* Tamanho maior */
+.moving-text, .background-text {
+    font-size: calc(1.2 * (3em + 1.3vw));
+    font-weight: var(--black);
     position: absolute;
-    top: 45%;
-    left: 70%;
-    transform: translate(-50%, -50%); /* Centraliza o pseudo-elemento */
-    color: var(--orange); /* Cor do símbolo '&' */
-    mix-blend-mode: difference;
-    z-index: -1; /* Coloca o pseudo-elemento atrás dos outros textos */
-    opacity: .5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: calc(1.2 * (.65em + 1vw));
+}
+
+.moving-text {
+    color: var(--orange);
+    animation: swing 3s ease-in-out infinite;
+    z-index: -1;
+}
+
+.background-text {
+    z-index: -2;
+}
+
+@keyframes swing {
+    0% { transform: translateX(-2%);}
+    50% { transform: translateX(2%);}
+    100% { transform: translateX(-2%);}
 }
 
 /* About */
@@ -64,7 +69,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 72px;
+    gap: 54px;
 }
 
 .about-container .texts-container, .hire-me-container .texts-container {
@@ -90,10 +95,14 @@
     color: black;
 }
 
+.about-container .break-text {
+    display: none;
+}
+
 /* Portfolio */
 
 .portfolio {
-    padding: 72px 0;
+    padding: 64px 0 48px 0;
     display: flex;
     flex-direction: column;
     gap: 42px;
@@ -108,51 +117,54 @@
 }
 
 .portfolio-container {
-    position: relative;
+    padding: 0 16px;
     display: flex;
     gap: 32px;
-    overflow: hidden;
-    padding-left:  16px;
+    justify-content: space-between;
 }
 
 .cards-portfolio {
-    position: relative;
-    overflow-x: auto;   
-    padding-right: 16px;
+    width: 100%;
 }
 
 .card-portfolio-list {
-    display: flex;
-    gap: 16px;
-    white-space: nowrap;
-    box-sizing: border-box;
-    padding-right: 16px; /* Espaço adicional para a rolagem */}
+    display: grid;
+    grid-template-areas: 
+    "front ui"
+    "front ui";
+    gap: 48px;
+}
 
 .card-portfolio-item {
-    background-color: var(--orange);
-    padding: 64px 24px;
+    background: var(--orange);
     border-radius: 16px;
-    min-width: 137px;
-    max-width: 137px;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.card-portfolio-item:hover {
-    background-color: white;
-    color: var(--black-ish);
+.frontend {
+    grid-area: front;
+    width: 100%;
+    padding: 16px;
+    height: 18vh;
 }
 
-.card-portfolio-item:hover p {
-    color: var(--black-ish);
+.design-ui {
+    grid-area: ui;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-.card-portfolio-item:active {
-    background-color: var(--orange);
-    opacity: 0.5;
+.design-ui h3 {
+    font-size: 48px;
+}
+
+.design-ui .card-portfolio-item {
+    height: 100%;
+    padding: 16px;
 }
 
 .card-title {
@@ -166,11 +178,6 @@
     color: white;
 }
 
-.card-portfolio-list::after {
-    content: '';
-    flex: 0 0 8px; /* Ajuste conforme necessário para o espaçamento desejado */
-}
-
 /* Hire me */
 
 .hire-me-section {
@@ -178,7 +185,7 @@
     display: flex;
     flex-direction: column;
     gap: 42px;
-    padding: 32px  0;
+    padding: 32px 0;
 }
 
 .background-orange {
@@ -197,11 +204,24 @@
     justify-content: space-between;
     padding: 0 16px;
     align-items: center;
-    gap: 84px;
+    gap: 54px;
+}
+
+.hire-me-container .texts-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.hire-me-container .texts-container .description {
+    text-align: right;
 }
 
 .hire-me-container .small-title {
     color: white;
+}
+
+.hire-me-container .break-sec-text {
+    display: none;
 }
 
 .hire-me-img {
@@ -213,6 +233,205 @@
     padding-bottom: 0;
 }
 
-.hire-me-container .fill-button  {
+.hire-me-section .fill-button  {
     background-color: var(--black-ish);
+    padding: 8px 16px;
+    margin: 0 16px;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .texts-banner .texts-container {
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .back-text::before {
+        font-size: 30vh; /* Tamanho maior */
+        position: absolute;
+        top: 40%;
+        left: 35%;
+    }
+
+    .banner .buttons-container {
+        width: 70%;
+        margin: auto;
+    }
+
+
+    /* About */
+
+    .about-container{
+        gap: 0;
+    }
+
+    .about-img {
+        top: 60%;
+    }
+
+    .about-container .texts-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .about-container .small-title .break-text {
+        display: block;
+    }
+
+    .about-container p {
+        width: 30%;
+        text-align: left;
+    }
+
+    .about-container h3 {
+        font-size: var(--small-title);
+    }
+
+    .about-section .stroke-button {
+        width: 35%;
+        margin: auto;
+    }
+
+    /* Portfolio */
+
+    .portfolio {
+        align-items: center;
+        gap: 64px;
+    }
+
+    .portfolio-img {
+        position: absolute;
+        left: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .portfolio-container {
+        width: 100%;
+        justify-content: center;
+        position: relative;
+    }
+
+    .cards-portfolio {
+        display: flex;
+        justify-content: center;
+        width: 60%;
+    }
+
+    .portfolio .button {
+        width: 35%;
+        margin: auto;
+    }
+
+    .portfolio-img {
+        top: 65%;
+    }
+
+    /* Hire me */
+
+    .hire-me-section {
+        align-items: center;
+        gap: 48px;
+        padding: 64px 0  48px 0;
+    }
+
+    .hire-me-container {
+        width: 100%;
+        justify-content: center;
+        position: relative;
+    }
+
+    .hire-me-img {
+        position: absolute;
+        left: 32px;
+        top: 90%;
+        transform: translateY(-50%);
+    }
+    
+    .hire-me-container .texts-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
+    
+    .hire-me-container .texts-container h3 {
+        font-size: var(--small-title);
+    }
+
+    .hire-me-container .texts-container .description {
+        text-align: left;
+        width: 30%;
+    }
+
+    .hire-me-container .break-text {
+        display: block;
+    }
+
+    .hire-me-container .break-sec-text {
+        display: block;
+    }
+
+    .hire-me-section .button {
+        width: 33%;
+    }
+    
+}
+
+@media (min-width: 1024px) and (max-width: 2560px){
+    .banner .texts-container {
+        gap: 3vh;
+    }
+
+    .banner .texts-container p {
+        line-height: .65em;
+    }
+
+    .moving-text, .background-text {
+        font-size: calc(4 * (.7em + .5vw));
+        line-height: calc(1.2 * (.65em + .2vw));
+        top: 20px;
+    }
+
+    .banner .buttons-container {
+        width: 500px;
+        gap: 24px;
+    }
+
+    .about-section .button {
+        width: 250px;
+    }
+
+    .about-container p {
+        width: 200px;
+        text-align: left;
+    }
+
+    .portfolio .button{
+        width: 250px;
+    }
+
+    .hire-me-section .button {
+        width: 250px;
+    }
+
+    .hire-me-container .texts-container .description {
+        text-align: left;
+        width: 200px;
+    }
+}
+
+@media screen and (width: 1440px) {
+    .moving-text, .background-text {
+        top: 0;
+    }
+}
+
+@media screen and (width:2560px) {
+    .moving-text, .background-text {
+        top: -20px;
+    }
 }

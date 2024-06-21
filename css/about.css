@@ -15,6 +15,10 @@
     color: white;
 }
 
+.about-me .texts-container .big-title .stroke-white .break-text {
+    display: none;
+}
+
 .about-me .scrolling-text-container p {
     color: white;
 }
@@ -126,3 +130,246 @@
     background-color: white;
     border-bottom: 1px solid rgba(28, 28, 28, .3);
 }
+
+@media screen and (min-width:768px) {
+    
+    .about-me .texts-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        align-items: center;
+        padding: 32px 32px 0 32px;
+        width: 80%;
+        margin: auto;
+    }
+    
+    .about-me .big-title {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        font-size: 70px;
+        align-self: end;
+    }
+    
+    .about-me .description{
+        grid-column: 2/2;
+        grid-row: 1/3;
+    }
+    
+    .about-me .button {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        align-self: start;
+    }
+
+    /* Work Experience */
+    
+    .work-experience-container {
+        width: 80%;
+        margin: auto;
+    }
+
+    .work-experience-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+    }
+
+    .work-experience-container .title-container {
+        justify-content: center;
+        gap: 48px;
+    }
+
+    .work-experience-container .big-title {
+        font-size: 8vw;
+    }
+
+    .work-experience-list .medium-title {
+        grid-column: span 2;
+        text-align: center;
+    }
+
+    .work-experience-item:nth-child(1) {
+        text-align: right;
+    }
+
+    .work-experience-item:nth-child(2){
+        text-align: left;
+    }
+
+    .work-experience .button {
+        width: 40%;
+        margin: auto;
+    }
+
+    /* Education */ 
+
+    .education-container {
+        text-align: center;
+    }
+
+    .education-container .title-container {
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .education-container .big-title {
+        font-size: 8vw;
+    }
+
+    .education-container-texts .description {
+        width: 70%;
+        margin: auto;
+    }
+
+    /* Other Courses */
+
+    .other-courses-container .title-container {
+        justify-content: center;
+        gap: 32px;
+    }
+    .other-courses-container .big-title {
+        font-size: 8vw;
+    }
+
+    .other-courses-container .buttons-container {
+        width: 70%;
+        margin: auto;
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+    .about-me .texts-container .big-title {
+        font-size: 10vw;
+    }
+
+    .work-experience .big-title {
+        font-size: 6vw;
+    }
+
+    .education-container .big-title {
+        font-size: 7vw;
+    }
+
+    .other-courses-container .big-title {
+        font-size: 6vw;
+    }
+
+    .selection-boxes {
+        width: 70vw;
+        margin: auto;
+    }
+
+    .other-courses-container .buttons-container {
+        width: 80vw;
+        gap: 32px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    
+    .about-me .texts-container {
+        display: flex;
+        flex-direction: column;
+        width: 47vw;
+    }
+
+    .about-me .texts-container .big-title {
+        font-size: 6vw;
+    }
+
+    .about-me .texts-container .big-title .break-text {
+        display: none;
+    }
+
+    .about-me .texts-container .button {
+        margin: auto;
+        width: 20vw;
+    }
+
+    /* work experience */
+
+    .work-experience-container {
+        width: 52vw;
+    }
+
+    .work-experience-container .big-title {
+        font-size: 5.1vw;
+    }
+
+    .work-experience .button {
+        width: 20vw;
+    }
+
+    /* education */
+
+    .education-container .big-title {
+        font-size: 5.1vw;
+    }
+
+    .education-container-texts .description{
+        width: 45%;
+    }
+
+    /* other courses */
+
+    .other-courses-container .big-title {
+        font-size: 5.1vw;
+    }
+
+    .other-courses-container .selection-boxes {
+        width: 60%;
+        margin: auto;
+    }
+    
+    .other-courses-container .buttons-container {
+        width: 44vw;
+        gap: 48px;
+    }
+
+}
+
+    @media screen and (min-width: 2560px) {
+        .about-me .texts-container {
+            width: 30%;
+        }
+        
+        .about-me .texts-container .big-title {
+            font-size:3.83vw;
+        }
+
+        /* work experience */
+        .work-experience-container {
+            width: 30vw;
+        }
+
+        .work-experience-container .big-title {
+            font-size: 3vw;
+        }
+
+        /* education */
+
+        .education-container .big-title {
+            font-size: 3vw;
+        }
+
+        .education-container {
+            width: 60vw;
+            margin: auto;
+        }
+
+        /* other courses */
+
+        .other-courses-container {
+            width: 40vw;
+            margin: auto;
+        }
+
+        .other-courses-container .big-title {
+            font-size: 3vw;
+        }
+
+        .other-courses-container .buttons-container {
+            width: 25vw;
+        }
+    }

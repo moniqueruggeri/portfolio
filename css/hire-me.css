@@ -1,6 +1,7 @@
 .forms-container {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     gap: 32px;
     padding: 32px 16px 42px 16px;
 }
@@ -22,6 +23,11 @@ form {
 .form-name-email {
     display: flex;
     gap: 11px;
+    flex-wrap: wrap;
+}
+
+.form-name-email .form-group {
+    flex: 1;
 }
 
 .form-group input, .form-group textarea {
@@ -117,4 +123,82 @@ form {
     left: 50%;
     transform: translate(-50%, -50%);
     position:absolute;
+}
+
+@media screen and (min-width: 768px) {
+    .forms-container {
+        margin: auto;
+        align-items: flex-end;
+        padding: 32px 32px 42px 32px;
+    }
+
+    .forms-container .big-title {
+        font-size: 8vw;
+        margin: auto;
+    }
+
+    .forms-container .description {
+        width: 50vw;
+        text-align: right;
+        align-self: flex-end;
+    }
+
+    .form {
+        min-width: 100%;
+        margin: auto;
+    }
+
+    .form-name-email {
+        width: 100%;
+    }
+    
+    .form-name-email .form-group {
+        flex: 1;
+    }
+
+    .form .fill-button {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .forms-container {
+        padding: 32px 48px 42px 48px;
+    }
+
+    .forms-container .big-title {
+        text-align: center;
+        font-size: 7vw;
+    }
+
+    .forms-container .description {
+        width: 60vw;
+        align-self: center;
+        text-align: center;
+
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .forms-container {
+        width: 80%;
+    }
+
+    .forms-container .big-title {
+        font-size: 6vw;
+    }
+
+    .form {
+        min-width: 80%;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .forms-container .big-title {
+        font-size: 4vw;
+    }
+
+    .forms-container {
+        width: 60%;
+    }
 }

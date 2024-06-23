@@ -22,3 +22,98 @@
 .alura-books-img {
     background-image: url(/img/front-end-jobs/alurabooks/cover.png);
 }
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+@media screen and (min-width:768px) {
+    .projects-container {
+        width: 80%;
+        margin: auto;
+    }
+
+    .resume-project .big-title {
+        font-size: 8vw;
+        margin: auto;
+    }
+
+    .cards-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        justify-content: center;
+        margin: 0 16px;
+    }
+    
+    .projects-container .card {
+        width: calc(50% -16px);
+        margin: 0;
+        width: auto;
+    }
+
+    .project-page .button {
+        width: 60%;
+        margin: auto;
+    }
+
+    .other-projects .projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin: 0 16px;
+    }
+
+    .other-projects .projects .card {
+        width: calc(50% -16px);
+        margin: 0;
+        width: auto;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .project-page {
+        margin: 0 32px;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .cards-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .project-page {
+        margin: 0 48px;
+    }
+
+    .resume-project .big-title {
+        font-size: 6vw;
+    }
+
+    .project-page .button {
+        width: 30%;
+    }
+
+}
+
+@media screen and (min-width:2560px){
+    .cards-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .project-page {
+        margin: 0 54px;
+    }
+
+    .project-page .big-title {
+        font-size: 4vw;
+    }
+}
